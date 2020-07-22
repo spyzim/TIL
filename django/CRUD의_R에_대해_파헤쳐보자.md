@@ -104,13 +104,13 @@ class Board(models.Model):
 
 가 출력되는 것을 볼 수 있다. form 이란, Board 객체임을 알 수 있고, (28) 은 이 객체가 django의 db 로 부터 정보를 얻어와 출력한 숫자임을 유추할 수 있다. 실제로 models 는 django.db 로 부터 가져온 함수이기 때문에 가능하다.
 
-*  우리는 위 과정을 통해, Board 라는 객체, 즉 models.py 를 거쳐 장고의 데이터베이스와 소통할 수 있다는 것을 알아낼 수 있다. ( 소통: python 에서 squlite 로 번역 )
+*  우리는 위 과정을 통해, Board 라는 객체, 즉 models.py 를 거쳐 장고의 데이터베이스와 소통할 수 있다는 것을 알아낼 수 있다. ( 소통: python 에서 squlite 로 번역하여 db 에 전달 )
 
 
 
 > #### views.py
 
-* 다시 views.py 로 돌아와 아래의 코드로 진행해 보자.
+* 다시 views.py 로 돌아와 이번에는 아래의 코드로 진행해 보자.
 
 * 
 
@@ -180,5 +180,5 @@ class Board(models.Model):
 
   form 으로 인해, QueryDict 에서 HTML 로 바뀌어 출력이 된 것을 확인할 수 있다. 
 
-* 이후, form.is_valid() 로 유효성을 판단한 뒤, form.save() 로 데이터를 저장한다. form 은 위에서 설명했듯 장고 db 와 소통 가능하기 때문에 dgamgo.db 의 내장함수인 .save() 를 통해 저장 역시 가능하다. 때문에 중간중간 print문으로 form 의 타입을 확인해봐도 sqlite 로 변하지 않고 그대로 남아있음을 알 수 있다.
+* 이후, form.is_valid() 로 유효성을 판단한 뒤, form.save() 로 데이터를 저장한다. form 은 위에서 설명했듯 장고 db 와 소통 가능하기 때문에 dgango.db 의 내장함수인 .save() 를 통해 저장 역시 가능하다. 때문에 중간중간 print문으로 form 의 타입을 확인해봐도 sqlite 로 변하지 않고 그대로 남아있음을 알 수 있다.
 
