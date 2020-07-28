@@ -13,10 +13,19 @@
 
 
 
-* form 태그 : 웹 페이지에서의 입력 양식을 의미한다. 화면에는 나타나지 않음.
+* form 태그
+
+  * 웹 페이지에서의 입력 양식을 의미한다. 데이터를 전달하는 양식!
+  * `action` 속성 : action 은 빈칸 이므로 지금의 페이지( 여기서는 url 로 'create/' 를 포함한 페이지 )로 똑같이 이동하게 된다.
+
 * {{ shurdang.as_p }} : p 태그로 shurdang(Board.objects.all) 을 나타낸다.
 
-* submit 버튼을 누르면 'POST' 방식으로 action 을 취한다. 여기서 action 은 빈칸 이므로 지금의 페이지( 여기서는 url 로 'create/' 를 포함한 페이지 )로 똑같이 이동하게 된다.
+* submit 버튼을 누르면 'POST' 방식으로 데이터를 전송하게 된다.
+
+* POST 방식이란?
+
+  * ㅇㅇㅇ
+  * ㅇㅇㅇ
 
 * ``` python
   from django.urls import path
@@ -31,7 +40,7 @@
   ]
   ```
 
-  urls.py 의 코드이다. 'create/' 의 url 을 받으면 views.create 를 실행하도록 되 있다.
+  urls.py 의 코드이다. 'create/' 의 url 을 받으면 views.create 를 실행하도록 되있다.
 
 
 
@@ -60,7 +69,12 @@ def create(request):
 
 ```
 
-* templates 에서 post 방식으로 전달했으니, if 문 안으로 들어간다.
+* 전달방식
+
+  * get
+  * ddd
+  * post
+  * Ddd
 
 * 이때,  **print('request.POST', request.POST, type(request.POST))** 의 출력문을 보면
 
@@ -77,6 +91,7 @@ def create(request):
   이것으로 보아, request.POST.get() 함수를 거쳐 데이터의 형태가 str 로 바뀌었단 것을 알 수 있다.
 
 * **form = Board.objects.create(title=board_t, content=board_c)**
+
 * Board. 은 models.py 에서 선언한 class( 객체 ) 이다
 
 
@@ -156,7 +171,7 @@ class Board(models.Model):
 
 
 
-* BoardForm 안의 Meta 데이터를 보자.
+* BoardForm 안의 class Meta 를  보자.
 
   * 메타 데이터란?
 
